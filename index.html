@@ -1,173 +1,53 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>VEXA — High-Ticket Closer Blueprint</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- tsparticles -->
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-
 <style>
-body {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #0b1c2d;
-  color: #ffffff;
-  overflow-x: hidden;
-}
-header {
-  background-color: #081523;
-  padding: 25px 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  z-index: 10;
-}
+body { margin: 0; font-family: "Segoe UI", Arial, sans-serif; background-color: #0b1c2d; color: #ffffff; overflow-x: hidden; }
+header { background-color: #081523; padding: 25px 80px; display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 10; }
 header img { height: 55px; }
-nav a {
-  color: #ffffff;
-  text-decoration: none;
-  margin-left: 40px;
-  font-weight: 500;
-}
+nav a { color: #ffffff; text-decoration: none; margin-left: 40px; font-weight: 500; }
 nav a:hover { color: #ff6f1f; }
-
-/* HERO */
-.hero {
-  position: relative;
-  padding: 120px 20px 80px;
-  text-align: center;
-}
-#hero-bubbles {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-}
-.hero h1 {
-  font-size: 48px;
-  text-shadow: 0 0 15px #1f6fff, 0 0 30px #ff6f1f;
-  position: relative;
-  z-index: 1;
-}
-.hero p {
-  font-size: 22px;
-  max-width: 800px;
-  margin: auto;
-  color: #cfd8e3;
-  position: relative;
-  z-index: 1;
-  line-height: 1.6;
-}
-.series-label {
-  color: #ff6f1f;
-  font-weight: 600;
-  margin: 25px 0 40px;
-  position: relative;
-  z-index: 1;
-}
-.buttons {
-  position: relative;
-  z-index: 5;
-  margin-top: 30px;
-}
-.buttons img {
-  border-radius: 12px;
-  box-shadow: 0 0 25px #1f6fff;
-  transition: transform .3s, box-shadow .3s;
-}
-.buttons img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 40px #1f6fff, 0 0 20px #ff6f1f inset;
-}
-
-/* CONTENT */
-.section {
-  background-color: rgba(15,36,58,0.95);
-  padding: 90px 20px;
-}
-.card {
-  background-color: #081523;
-  max-width: 900px;
-  margin: auto;
-  padding: 50px;
-  border-radius: 12px;
-  box-shadow: 0 0 40px rgba(0,0,0,.4);
-}
-h2 {
-  color: #ff6f1f;
-  font-size: 34px;
-  margin-top: 40px;
-}
-p {
-  font-size: 18px;
-  color: #cfd8e3;
-  line-height: 1.7;
-}
-ul {
-  list-style: none;
-  padding: 0;
-}
-ul li {
-  margin-bottom: 10px;
-  font-size: 18px;
-  color: #cfd8e3;
-}
-
-/* FOOTER */
-footer {
-  background-color: #081523;
-  padding: 40px 20px;
-  text-align: center;
-  color: #8fa6bf;
-  font-size: 14px;
-}
-footer img {
-  height: 40px;
-  margin-bottom: 10px;
-}
-
-/* SMOOTH SCROLL */
-html {
-  scroll-behavior: smooth;
-}
-
-@media(max-width:600px){
-  header { padding: 20px; }
-  nav a { margin-left: 15px; }
-  .hero h1 { font-size: 32px; }
-  .hero p, ul li { font-size: 16px; }
-}
+.hero { position: relative; padding: 120px 20px 80px; text-align: center; }
+#hero-bubbles { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.hero h1 { font-size: 48px; text-shadow: 0 0 15px #1f6fff, 0 0 30px #ff6f1f; position: relative; z-index: 1; }
+.hero p { font-size: 22px; max-width: 800px; margin: auto; color: #cfd8e3; position: relative; z-index: 1; line-height: 1.6; }
+.series-label { color: #ff6f1f; font-weight: 600; margin: 25px 0 40px; position: relative; z-index: 1; }
+.buttons { position: relative; z-index: 5; margin-top: 30px; }
+.buttons img { border-radius: 12px; box-shadow: 0 0 25px #1f6fff; transition: transform .3s, box-shadow .3s; }
+.buttons img:hover { transform: scale(1.05); box-shadow: 0 0 40px #1f6fff, 0 0 20px #ff6f1f inset; }
+.section { background-color: rgba(15,36,58,0.95); padding: 90px 20px; }
+.card { background-color: #081523; max-width: 900px; margin: auto; padding: 50px; border-radius: 12px; box-shadow: 0 0 40px rgba(0,0,0,.4); }
+h2 { color: #ff6f1f; font-size: 34px; margin-top: 40px; }
+p { font-size: 18px; color: #cfd8e3; line-height: 1.7; }
+ul { list-style: none; padding: 0; }
+ul li { margin-bottom: 10px; font-size: 18px; color: #cfd8e3; }
+footer { background-color: #081523; padding: 40px 20px; text-align: center; color: #8fa6bf; font-size: 14px; }
+footer img { height: 40px; margin-bottom: 10px; }
+@media(max-width:600px){ header { padding: 20px; } nav a { margin-left: 15px; } .hero h1 { font-size: 32px; } .hero p, ul li { font-size: 16px; } }
 </style>
 </head>
 <body>
 
 <header>
   <img src="logo.png" alt="VEXA Logo">
- <nav>
-    <a href="#home">Home</a>
-    <a href="#products">Products</a>
-    <a href="#vexa-standard">The VEXA Standard</a>
-    <a href="#contact">Contact</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="about.html">The VEXA Standard</a>
+    <a href="contact.html">Contact</a>
   </nav>
 </header>
 
 <!-- HERO -->
-<section id="home" class="hero">
+<section class="hero">
   <div id="hero-bubbles"></div>
-
   <h1>VEXA High-Ticket Closer Blueprint</h1>
-
-  <p>
-    Zero experience to professional closer in 90 days.
-    A structured, ethical training system designed to build real sales skills —
-    not hype, manipulation, or unrealistic promises.
-  </p>
-
+  <p>Zero experience to professional closer in 90 days. A structured, ethical training system designed to build real sales skills — not hype, manipulation, or unrealistic promises.</p>
   <div class="series-label">VEXA PROFESSIONAL TRAINING SERIES</div>
-
   <div class="buttons">
     <a href="https://www.jvzoo.com/b/115479/433067/1" target="_blank">
       <img src="https://i.jvzoo.com/115479/433067/11" alt="Buy via JVZoo">
@@ -177,15 +57,10 @@ html {
 </section>
 
 <!-- PRODUCT CONTENT -->
-<section id="products" class="section">
+<section class="section">
   <div class="card">
-
     <h2>VEXA Professional Training — Featured Product</h2>
-
-    <p>
-      Built for beginners who want to understand how high-ticket sales actually work
-      in real business environments — without pressure tactics, scripts, or false expectations.
-    </p>
+    <p>Built for beginners who want to understand how high-ticket sales actually work in real business environments — without pressure tactics, scripts, or false expectations.</p>
 
     <h2>What This Blueprint Helps You Learn</h2>
     <ul>
@@ -198,9 +73,9 @@ html {
       <li>Positioning yourself for remote closer opportunities</li>
     </ul>
 
-    <h2>What’s Included</h2>
+    <h2>What's Included</h2>
     <ul>
-      <li> Up to 28-page professional PDF training manual</li>
+      <li>Up to 28-page professional PDF training manual</li>
       <li>Beginner-friendly explanations with expert-level depth</li>
       <li>Proven call frameworks and conversation structures</li>
       <li>Objection-handling scripts and real examples</li>
@@ -226,44 +101,8 @@ html {
     </ul>
 
     <h2>Important Purchase Information</h2>
-
-    <p>
-      <strong>Non-Refundable Purchase:</strong><br>
-      This is a digital product. All sales are final and non-refundable.
-      By purchasing, you request immediate access and waive any right of withdrawal.
-    </p>
-
-    <p>
-      <strong>JVZoo Disclaimer:</strong><br>
-      This product does not guarantee income or success.
-      Results depend on effort, experience, and market conditions.
-      JVZoo® is a registered trademark of BBC Systems Inc.
-      JVZoo acts solely as the retailer and does not endorse this product.
-    </p>
-
-  </div>
-</section>
-
-<!-- VEXA Standard Section -->
-<section id="vexa-standard" class="section">
-  <div class="card">
-    <h2>The VEXA Standard</h2>
-    <p>
-      The VEXA Standard is our ethical, structured training methodology
-      for high-ticket sales. It focuses on skill-building, real-life
-      call simulations, and frameworks for confident closing.
-    </p>
-  </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="section">
-  <div class="card">
-    <h2>Contact</h2>
-    <p>
-      You can reach us via email at <a href="mailto:support@vexa.com" style="color:#ff6f1f;">support@vexa.com</a>
-      or fill out our contact form on the website for inquiries.
-    </p>
+    <p><strong>Non-Refundable Purchase:</strong><br>This is a digital product. All sales are final and non-refundable. By purchasing, you request immediate access and waive any right of withdrawal.</p>
+    <p><strong>JVZoo Disclaimer:</strong><br>This product does not guarantee income or success. Results depend on effort, experience, and market conditions. JVZoo® is a registered trademark of BBC Systems Inc. JVZoo acts solely as the retailer and does not endorse this product.</p>
   </div>
 </section>
 
@@ -274,11 +113,7 @@ html {
 
 <script>
 tsParticles.load("hero-bubbles", {
-  particles: {
-    number: { value: 25 },
-    color: { value: "#ff6f1f" },
-    move: { enable: true, speed: 1, direction: "top" }
-  }
+  particles: { number: { value: 25 }, color: { value: "#ff6f1f" }, move: { enable: true, speed: 1, direction: "top" } }
 });
 </script>
 
