@@ -129,6 +129,11 @@ footer img {
   margin-bottom: 10px;
 }
 
+/* SMOOTH SCROLL */
+html {
+  scroll-behavior: smooth;
+}
+
 @media(max-width:600px){
   header { padding: 20px; }
   nav a { margin-left: 15px; }
@@ -142,14 +147,15 @@ footer img {
 <header>
   <img src="logo.png" alt="VEXA Logo">
  <nav>
-    <a href="#">Home</a>
-    <a href="#">Products</a>
-    <a href="#">The VEXA Standard</a>
-    <a href="#">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#vexa-standard">The VEXA Standard</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
+
 <!-- HERO -->
-<section class="hero">
+<section id="home" class="hero">
   <div id="hero-bubbles"></div>
 
   <h1>VEXA High-Ticket Closer Blueprint</h1>
@@ -171,7 +177,7 @@ footer img {
 </section>
 
 <!-- PRODUCT CONTENT -->
-<section class="section">
+<section id="products" class="section">
   <div class="card">
 
     <h2>VEXA Professional Training — Featured Product</h2>
@@ -235,6 +241,29 @@ footer img {
       JVZoo acts solely as the retailer and does not endorse this product.
     </p>
 
+  </div>
+</section>
+
+<!-- VEXA Standard Section -->
+<section id="vexa-standard" class="section">
+  <div class="card">
+    <h2>The VEXA Standard</h2>
+    <p>
+      The VEXA Standard is our ethical, structured training methodology
+      for high-ticket sales. It focuses on skill-building, real-life
+      call simulations, and frameworks for confident closing.
+    </p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section">
+  <div class="card">
+    <h2>Contact</h2>
+    <p>
+      You can reach us via email at <a href="mailto:support@vexa.com" style="color:#ff6f1f;">support@vexa.com</a>
+      or fill out our contact form on the website for inquiries.
+    </p>
   </div>
 </section>
 
